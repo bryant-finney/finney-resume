@@ -30,115 +30,127 @@
 \section{Embedded Systems Engineer}
 \begin{itemize}
   \item Developed and integrated shared libraries in C for communication and control of
-  third-party tracker system
-  \begin{itemize}
-    \item Two communications protocols over RS-485 and RS-232 for configuration
-    transmission and data retrieval
+    third-party tracker system
+    \begin{itemize}
+      \item Libraries utilized two communications channels over RS-485 and RS-232 for
+        configuration transmission and data retrieval
 
-    \item Protocols included ASCII and non-ASCII binary packets with checksums and ASCII
-    hex representations
+      \item Protocols included ASCII and non-ASCII binary packets with checksums and
+        ASCII hex representations
 
-    \item Configuration parameters were retrieved from SQLite Database and ASCII
-    configuration file
-  \end{itemize}
+      \item Configuration parameters were retrieved from SQLite Database and ASCII
+        configuration file
 
-  \item Developed and integrated libraries for tokenizing and parsing ASCII file contents
-  with comments
+      \item Developed and integrated libraries for tokenizing and parsing ASCII file
+        contents with comments
+    \end{itemize}
 
   \item Integrated tracker communications, acquisition, and processing libraries with
-  framework for collecting RTB data
+    framework for collecting RTB data
+    \begin{itemize}
+      \item Developed lightweight logging library using variadic functions for creating
+        and writing to log files, as well as writing messages to std-out for real-time
+        feedback during developmental testing of framework libraries
 
-  \item Developed lightweight logging library using variadic functions for creating and
-  writing to log files, as well as writing messages to std-out for real-time feedback
-  during developmental testing of framework libraries
+      \item Assisted with aircraft installation and testing on the airframes OH-58C and
+        OH-6A of the entire embedded system in aspects of vibration data collections and
+        rotor track height data collections
+    \end{itemize}
 
-  \item Assisted with aircraft installation and testing on the airframes OH-58C and OH-6A of
-  the entire embedded system in aspects of vibration data collections and rotor track
-  height data collections
+  \item Developed and tested vibration data analysis algorithms for condition-based
+    maintenance from an embedded OS
+    \begin{itemize}
+      \item Implemented the algorithms in C for utilization by an ARM cortex 335x series
+        microcontroller. The focus of the algorithms was on time domain, frequency
+        domain, and synchronous domain analyses
 
-  \item Developed and tested vibration data analysis algorithms for condition-based maintenance
-  from an embedded OS
+      \item Developed a high-level framework in C incorporated with the Yocto project
+        for handling onboard processing
+        \begin{itemize}
+          \item Designed and integrated communication functions with an embedded SQLite
+            database for retrieving algorithm parameters, as well as loading and storing
+            both raw and processed data
 
-  \item Implemented the algorithms in C for utilization by an ARM cortex 335x series
-  microcontroller. The focus of the algorithms was on time domain, frequency domain, and
-  synchronous domain analyses
+          \item Interfaced with low-level routines for collecting raw data and
+            monitoring system state via a watchdog timer
 
-  \item Developed a high-level framework in C incorporated with the Yocto project for handling
-  onboard processing
+          \item Established communications protocol for system-wide integration in order
+            to perform all onboard data acquisitions and processing upon triggers either
+            by the user or by flight regime
+        \end{itemize}
 
-  \item Designed and integrated communication functions with an embedded SQLite database for
-  retrieving algorithm parameters, as well as loading and storing both raw and processed
-  data
+      \item Performed software verification testing by comparing results from the data
+        analysis framework with a Python transliteration of the original MatLab scripts.
+        The results were displayed and analyzed
+    \end{itemize}
 
-  \item Interfaced with low-level routines for collecting raw data and monitoring system state
-  via a watchdog timer
+  \item Designed and tested firmware for the PIC24F08KL301 MCU using MPLAB X, Eclipse,
+    and PICKIT3
+    \begin{itemize}
+      \item The microcontroller was used to emulate tachometer signals with two 8-bit
+        timers and to translate between RS-485 and RS-232 message protocols for
+        interfacing with a rotor blade tracking system
 
-  \item Established communications protocol for system-wide integration in order to perform all
-  onboard data acquisitions and processing upon triggers either by the user or by flight
-  regime
+      \item The two UART peripherals were utilized for the serial communications: one
+        dedicated to RS-485 communication with the controlling OS, and the other was
+        dedicated to RS-232 communication with the tracking system
 
-  \item Performed software verification testing by comparing results from the data analysis
-  framework with a Python transliteration of the original MatLab scripts. The results were
-  displayed and analyzed
+      \item Implemented a communications protocol for responding to various control
+        bytes transmitted over RS-485
 
-  \item Designed and tested firmware for the PIC24F08KL301 MCU using MPLAB X, Eclipse, and
-  PICKIT3
+      \item Developed a boot loader for executing firmware updates over serial traffic:
+        created host side in Python using minimal packages for ease of deployment on the
+        embedded Linux system, and tested the MCU side written in C
 
-  \item The microcontroller was used to emulate tachometer signals with two 8-bit timers and to
-  translate between RS-485 and RS-232 message protocols for interfacing with a rotor blade
-  tracking system
+      \item Phase 1 development was done on the SAMD21G18A MCU with Eclipse and the
+        Arduino IDE for programming
+    \end{itemize}
 
-  \item The two UART peripherals were utilized for the serial communications: one dedicated to
-  RS-485 communication with the controlling OS, and the other was dedicated to RS-232
-  communication with the tracking system
+  \item Led a multidisciplinary team to design a new product for tracking helicopter
+    rotor blades
 
-  \item Implemented a communications protocol for responding to various control bytes
-  transmitted over RS-485
+  \begin{itemize}
+    \item Performed individual research and bench-marking, theoretical modeling using
+      linear algebra and geometry, and data visualization for demonstrating theoretical
+      system performance characteristics. Provided the recommendation for the selected
+      design and continued to lead the development of this design
 
-  \item Developed a boot loader for executing firmware updates over serial traffic: created
-  host side in Python using
-  minimal packages for ease of deployment on the embedded Linux system, and tested the MCU side written in C
+    \item Conducted electro-optical radiometric modeling of solid state sensors for
+      blade detection
 
-  \item Phase 1 development was done on the SAMD21G18A MCU with Eclipse and the Arduino IDE for
-  programming
+    \item Completed optical design of system hardware using matrix ray tracing in
+      MathCAD, Python, and Matlab
 
-  \item Led a multidisciplinary team to design a new product for tracking helicopter rotor
-  blades
+    \item Developed opto-mechanical design of illuminator and sensor to
+      minimize space requirements while considering reliability, affordability, and
+      maintainability
 
-  \item Performed individual research and bench-marking, theoretical modeling using linear
-  algebra and geometry, and
-  data visualization for demonstrating theoretical system performance characteristics. Provided the
-  recommendation for the selected design and continued to lead the development of this design
+    \item Reviewed materials and manufacturing processes for component design and
+      selection
 
-  \item Conducted electro-optical radiometric modeling of solid state sensors for blade
-  detection
+    \begin{itemize}
+      \item Design criteria included the following: overall size, weight, and cost; IR
+        safety compliance according to IEC 60825-1 and IEC 62471; insensitivity to
+        environmental lighting conditions; environmental qualification according to
+        DO-160 and MIL-STD-810; hardware reliability, aesthetic appeal, and convenience
+        of operation to the end user
+    \end{itemize}
 
-  \item Completed optical design of system hardware using matrix ray tracing in MathCAD,
-  Python, and Matlab
-
-  \item Developed opto-mechanical design of illuminator and sensor to
-  minimize space requirements while considering reliability, affordability, and
-  maintainability
-
-  \item Reviewed materials and manufacturing processes for component design and selection
-
-  \item Design criteria included the following: overall size, weight, and cost; IR safety
-  compliance according to IEC 60825-1 and IEC 62471; insensitivity to environmental
-  lighting conditions; environmental qualification according to DO-160 and MIL-STD-810;
-  hardware reliability, aesthetic appeal, and convenience of operation to the end user
-
-  \item The system is currently entering the prototype stage and is estimated to cost less than
-  existing systems while improving performance and reducing maintenance costs
+    \item The system is currently entering the prototype stage and is estimated to cost less than
+      existing systems while improving performance and reducing maintenance costs
+  \end{itemize}
 
   \item Performed all engineering analysis, design, and fabrication of a stand for testing
-  developmental systems
+    developmental systems
 
-  \item The stand replicated a scaled rotor of approximately 8 ft. diameter, capable of
-  rotational speed over 300 rpm
+  \begin{itemize}
+    \item The stand replicated a scaled rotor of approximately 8 ft. diameter, capable of
+      rotational speed over 300 rpm
 
-  \item Used finite airfoil drag analysis to model the transient and steady-state speed based
-  on input power. Total cost was under \$1000, and the test stand was used for rotor track
-  and balance tests
+    \item Used finite airfoil drag analysis to model the transient and steady-state speed based
+      on input power. Total cost was under \$1000, and the test stand was used for rotor track
+      and balance tests
+  \end{itemize}
 \end{itemize}
 % End of the document
 \end{document}
