@@ -10,27 +10,45 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{booktabs}
 
-\geometry{ a4paper,          % redundant (already in \documentclass)
+\geometry{
+  a4paper,          % redundant (already in \documentclass)
   left=0.5in,
   right=0.5in,
   top=0.5in,
   bottom=0.90in,
   heightrounded,    % better use it
 }
-
 \usepackage[subpreambles=true]{standalone}
 \usepackage{import}
 
 \begin{document}
+
+\begin{table}
+  \begin{tabular}{lr}
+    {\noindent\Huge Bryant Finney}     &     todo: change to right justified
+  \end{tabular}
+\end{table}
+
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
 no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-%\import{ierus-projects/CCP/}{ccp.tex}
-\import{rmci/}{rmci.tex}
+TODO: populate employer table
+\begin{table}[h]
+  \begin{tabular}{lllll}
+    1 &  2         &          &  &  \\
+    1 &  2         &          &  &  \\
+    1 &  2         &          &  &  \\
+    1 &  2         &          &  &
+  \end{tabular}
+\end{table}
 
+\import{ierus/ccp/}{ccp.tex}
+\import{ierus/maatc/}{maatc.tex}
+\import{rmci/}{rmci.tex}
 
 \end{document}
