@@ -5,12 +5,14 @@
 
 % Comment the following line to deny the usage of umlauts and other non-ASCII characters
 \usepackage[latin1]{inputenc}
-\usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{geometry}
 \usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{tabularx}
 
 \geometry{
   a4paper,          % redundant (already in \documentclass)
@@ -26,9 +28,12 @@
 \begin{document}
 
 \begin{table}
-  \begin{tabular}{lr}
-    {\noindent\Huge Bryant Finney}     &     todo: change to right justified
-  \end{tabular}
+  \begin{tabularx}{\textwidth}{Xr|l}
+    \toprule
+    \multirow{2}{*}{\noindent\Huge Bryant Finney} & 3812 Price Circle SW & finney.bp@gmail.com \\
+                                   & Huntsville, Al 35805 & 256-714-1289 \\
+  \bottomrule
+  \end{tabularx}
 \end{table}
 
 
