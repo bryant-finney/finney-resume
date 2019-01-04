@@ -11,6 +11,7 @@
 \usepackage{booktabs}
 \usepackage{geometry}
 \usepackage{graphicx}
+\usepackage{multicol}
 \usepackage{multirow}
 \usepackage{tabularx}
 
@@ -22,38 +23,58 @@
   bottom=0.90in,
   heightrounded,    % better use it
 }
+
 \usepackage[subpreambles=true]{standalone}
 \usepackage{import}
 
 \begin{document}
-
 \begin{table}
   \begin{tabularx}{\textwidth}{Xr|l}
     \toprule
     \multirow{2}{*}{\noindent\Huge Bryant Finney} & 3812 Price Circle SW & finney.bp@gmail.com \\
-                                   & Huntsville, Al 35805 & 256-714-1289 \\
-  \bottomrule
+                                                  & Huntsville, Al 35805 & 256-714-1289 \\
+    \bottomrule
   \end{tabularx}
 \end{table}
 
+\noindent\begin{tabularx}{\textwidth}{Xr}
+  \large Education & \\
+  \bottomrule
+\end{tabularx}
+\smallskip
+
+\begin{tabularx}{\textwidth}{ccXlr}
+  \multicolumn{3}{l}{Bachelor's of Science in Mechanical Engineering} & \multicolumn{2}{r}{The University of Alabama in Huntsville} \\
+  \textit{suma cum laude} & \textit{pi tau sigma} & \textit{tau beta pi} & 2009 - 2013 & GPA: 4.0 \\
+\end{tabularx}
+\bigskip
+
+\noindent\begin{tabularx}{\textwidth}{Xr}
+  \large Employment History & \\
+  \bottomrule
+\end{tabularx}
+\smallskip
+
+\begin{tabularx}{\textwidth}{Xr}
+  IERUS Technologies, Inc. & 2016 October - Present \\
+  Engineer & \\
+\end{tabularx}
+\smallskip
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
 no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-TODO: populate employer table
-\begin{table}[h]
-  \begin{tabular}{lllll}
-    1 &  2         &          &  &  \\
-    1 &  2         &          &  &  \\
-    1 &  2         &          &  &  \\
-    1 &  2         &          &  &
-  \end{tabular}
-\end{table}
-
 \import{ierus/ccp/}{ccp.tex}
 \import{ierus/maatc/}{maatc.tex}
+
+\begin{tabularx}{\textwidth}{Xr}
+  RMCI, Inc. & 2012 August - 2016 October \\
+  Embedded Systems Engineer & \\
+\end{tabularx}
+\smallskip
+
 \import{rmci/}{rmci.tex}
 
 \end{document}
