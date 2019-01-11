@@ -3,31 +3,32 @@
 % author:   Bryant Finney <bryant.finney@uah.edu>
 \documentclass[a4paper]{article}
 
-% Comment the following line to deny the usage of umlauts and other non-ASCII characters
-\usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
 
-% Uncomment the following line to allow the usage of graphics (.jpg, .png, etc.)
-%\usepackage{graphicx}
-
 % Start the document
 \begin{document}
 
 % Create a new 1st level heading
-\section{Conformal Conductivity Probe}
-    TODO: add material
-    \begin{list}{ahhh}
-        \item Here is a test item \#1
-        \item Here is a test item \#2
-    \end{list}
+\noindent
+\hspace{0.120in}
+\textbf{Conformal Conductivity Probe}
+\smallskip
 
-% Uncomment the following two lines if you want to have a bibliography. Please do not forget to add an entry to your bibliography and reference it by using the \cite{} command
-%\bibliographystyle{alphadin}
-%\bibliography{document}
+\begin{itemize}
+  \item Developed Python application for interactively controlling a vector network
+    analyzer used to measure the condition of aircraft skin joints
+  \begin{itemize}
+    \item Utilized Python's QT package for displaying data in realtime as measurements
+      were taken
+    \item Created a Python connector to interface with the VNA's COM server
+    \item Created an emulator for the VNA's COM server to allow cross-platform
+      development and testing until the COM-based drivers were replaced
+  \end{itemize}
+\end{itemize}
 
 % End of the document
 \end{document}
