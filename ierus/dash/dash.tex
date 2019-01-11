@@ -1,0 +1,32 @@
+% file:     dash.tex
+% created:  2019-01-04 15:15
+% author:   Bryant Finney <bryant.finney@uah.edu>
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+
+% Start the document
+\begin{document}
+
+% Create a new 1st level heading
+\noindent
+\hspace{0.120in}
+\textbf{DASH}
+\smallskip
+
+\begin{itemize}
+  \item Developed shared C++ libraries for parsing XML configuration files and integrated
+    the parser with the rest of the trajectory propagation application
+  \begin{itemize}
+    \item Designed XML schema for storing trajectory 6 DoF satellite trajectory data
+    \item Used OpenCL binaries to reference GPU kernel modules to increase speed of
+      runge-kutta derivative calculations
+   \end{itemize}
+\end{itemize}
+
+% End of the document
+\end{document}
