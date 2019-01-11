@@ -29,52 +29,53 @@
 
 \begin{document}
 \begin{table}
-  \begin{tabularx}{\textwidth}{Xr|l}
+  \noindent\begin{tabularx}{\textwidth}{Xr|l}
     \toprule
-    \multirow{2}{*}{\noindent\Huge Bryant Finney} & 3812 Price Circle SW & finney.bp@gmail.com \\
+    \multirow{2}{*}{\Huge Bryant Finney} & 3812 Price Circle SW & finney.bp@gmail.com \\
                                                   & Huntsville, Al 35805 & 256-714-1289 \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \large Education & \\
+  \Large Employment History & \\
   \bottomrule
 \end{tabularx}
 \smallskip
-
-\begin{tabularx}{\textwidth}{ccXlr}
-  \multicolumn{3}{l}{Bachelor's of Science in Mechanical Engineering} & \multicolumn{2}{r}{The University of Alabama in Huntsville} \\
-  \textit{suma cum laude} & \textit{pi tau sigma} & \textit{tau beta pi} & 2009 - 2013 & GPA: 4.0 \\
-\end{tabularx}
-\bigskip
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \large Employment History & \\
-  \bottomrule
-\end{tabularx}
-\smallskip
-
-\begin{tabularx}{\textwidth}{Xr}
   IERUS Technologies, Inc. & 2016 October - Present \\
   Engineer & \\
 \end{tabularx}
 \smallskip
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\bigskip
 
+\import{ierus/tpt/}{tpt.tex}
+\import{ierus/dash/}{dash.tex}
 \import{ierus/ccp/}{ccp.tex}
 \import{ierus/maatc/}{maatc.tex}
 
-\begin{tabularx}{\textwidth}{Xr}
+\noindent\begin{tabularx}{\textwidth}{Xr}
+  \Large \\ \bottomrule \\
   RMCI, Inc. & 2012 August - 2016 October \\
   Embedded Systems Engineer & \\
 \end{tabularx}
 \smallskip
 
 \import{rmci/}{rmci.tex}
+
+\noindent\begin{tabularx}{\textwidth}{Xr}
+  \Large Education & \\
+  \bottomrule
+\end{tabularx}
+\smallskip
+
+\noindent\begin{tabularx}{\textwidth}{cccXr}
+  \multicolumn{3}{l}{The University of Alabama in Huntsville} & & 2009 - 2013 \\
+  \multicolumn{5}{l}{\hspace{.125in} Bachelor's of Science in Mechanical Engineering} \\
+  \hspace{.125in} \textit{suma cum laude} & \textit{pi tau sigma} & \textit{tau beta pi} & GPA: 4.0 \\
+\end{tabularx}
+\bigskip
 
 \end{document}
