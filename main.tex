@@ -14,6 +14,17 @@
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\newcommand{\csection}[1]{\Large\textbf{#1}}
+\newcommand{\csubsection}[1]{\large\textbf{#1}}
 
 \geometry{
   a4paper,          % redundant (already in \documentclass)
@@ -24,28 +35,41 @@
   heightrounded,    % better use it
 }
 
-\usepackage[subpreambles=true]{standalone}
+\usepackage{standalone}
 \usepackage{import}
 
 \begin{document}
 \begin{table}
   \noindent\begin{tabularx}{\textwidth}{Xr|l}
     \toprule
-    \multirow{2}{*}{\Huge Bryant Finney} & 1306 Randolph Ave SE, APT 2A & finney.bp@gmail.com \\
-                                         & Huntsville, Al 35801         & 256-714-1289        \\
+    \multirow{2}{*}{\Huge Bryant Finney} & 1306 Randolph Ave SE, APT 2A & \href{mailto:finneybp@gmail.com}{finney.bp@gmail.com} \\
+                                         & Huntsville, Al 35801         & \href{tel:1-256-714-1289}{256-714-1289}               \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \Large Employment History & \\
-  \bottomrule
+  \csection{Employment History} & \\
 \end{tabularx}
 \smallskip
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  IERUS Technologies, Inc. & 2016 October - Present \\
-  Engineer                 &                        \\
+  \toprule
+  \csubsection{OutdoorLink, Inc.} & 2019 February - Present                                   \\
+  \textit{Lead Software Engineer} & \href{http://smartlinkcontrol.com/}{smartlinkcontrol.com} \\
+\end{tabularx}
+\smallskip
+
+\import{odl/}{intro.tex}
+
+\bigskip
+
+\import{odl/devops/}{devops.tex}
+
+\noindent\begin{tabularx}{\textwidth}{Xr}
+  \toprule
+  \csubsection{IERUS Technologies, Inc.} & 2016 October - 2019 February                     \\
+  \textit{Engineer}                      & \href{https://www.ierustech.com/}{ierustech.com} \\
 \end{tabularx}
 \smallskip
 
@@ -61,9 +85,9 @@ scrum team.
 \import{ierus/maatc/}{maatc.tex}
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \Large                                                 \\ \bottomrule \\
-  RMCI, Inc.                & 2012 August - 2016 October \\
-  Embedded Systems Engineer &                            \\
+  \toprule
+  \csubsection{RMCI, Inc.}           & 2012 August - 2016 October                     \\
+  \textit{Embedded Systems Engineer} & \href{https://www.rmci-inc.com/}{rmci-inc.com} \\
 \end{tabularx}
 \smallskip
 
@@ -77,23 +101,23 @@ included software, firmware, and hardware design, implementation, and testing.
 \import{rmci/}{rmci.tex}
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \Large                                                              \\ \bottomrule \\
-  University of Alabama in Huntsville & 2012 February - 2012 December \\
-  Research Assistant                  &                               \\
+  \toprule
+  \csubsection{University of Alabama in Huntsville} & 2012 February - 2012 December                     \\
+  \textit{Research Assistant}                       & \href{https://www.uah.edu/smap}{www.uah.edu/smap} \\
 \end{tabularx}
 
 \import{uah/}{ra.tex}
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \Large                                                                            \\ \bottomrule \\
-  University of Alabama in Huntsville                 & 2010 August - 2012 December \\
-  Peer-Assisted Study Session (PASS) Leader and Tutor &                             \\
+  \toprule
+  \csubsection{University of Alabama in Huntsville}            & 2010 August - 2012 December                               \\
+  \textit{Peer-Assisted Study Session (PASS) Leader and Tutor} & \href{https://www.uah.edu/ssc/pass}{www.uah.edu/ssc/pass} \\
 \end{tabularx}
 
 \import{uah/}{pass.tex}
 
 \noindent\begin{tabularx}{\textwidth}{Xr}
-  \Large Education & \\
+  \csection{Education} & \\
   \bottomrule
 \end{tabularx}
 \smallskip
